@@ -50,6 +50,7 @@ struct FileParser {
     ///   - path: Path to file.
     /// - Throws: parsing errors.
     init(verbose: Bool = false, contents: String, path: Path? = nil) {
+        Request.surpressUIDCache()
         self.verbose = verbose
         self.contents = contents
         self.path = path?.string
