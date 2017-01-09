@@ -4,17 +4,14 @@
 ## Master
 
 ### New Features
-
+- Sourcery will now use parallel parsing, expect more than 2x as fast execution 🚤 .
 - Added support for `ImplicitlyUnwrappedOptional`
 - `actualTypeName` property of `Method.Parameter`, `Variable`, `Enum.Case.AssociatedValue`, `TupleType.Element` now returns `typeName` if type is not a type alias
 - `Enum` now contains type information for its raw value type. `rawType` now return `Type` object, `rawTypeName` returns its `TypeName`
 - Added `annotated` filter to filter by annotations
 - Added negative filters counterparts
 - Added support for attributes, i.e. `@escaping`
-
-## 0.5.1
-
-- Swift Templates are now supported
+- Experimental support for Swift Templates
 
 ```
 <% for type in types.classes { %>
@@ -29,6 +26,10 @@
     }
 <% } %>
 ```
+
+### Bug Fixes
+
+### Internal Changes
 
 ### New Features
 - Variables with default initializer are now supported, e.g. `var variable = Type(...)`
